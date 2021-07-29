@@ -30,3 +30,6 @@ test("handles errors for scoops and toppings routes", async () => {
 
 //waitFor method: wait until we have two alerts. Otherwise test will find one alert and
 //stop
+//issue was that it was not waiting for both server calls to return. Waitfor method becuase FindBy was not enough
+//findby would succeed when first server call returned, we needed to wait for both of them.
+//most of the time findby is enough but there are cases where it is not.
